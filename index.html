@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris · July 6–12, 2026 · Patty's Complete Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B3A5C;
+    --gold: #B8963E;
+    --gold-light: #F5EDD6;
+    --cream: #FAF7F2;
+    --dark: #1A1A1A;
+    --mid: #666;
+    --red: #B71C1C;
+    --green: #1B5E20;
+    --amber: #E65100;
+    --blue-light: #E8EFF7;
+    --green-light: #E8F5E9;
+    --red-light: #FDECEA;
+    --amber-light: #FFF8E1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    color: white;
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(64px, 12vw, 120px);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    line-height: 1;
+    position: relative;
+  }
+  .hero-dates {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--gold);
+    font-style: italic;
+    margin: 12px 0 8px;
+    letter-spacing: 0.05em;
+  }
+  .hero-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .hero-hotel {
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 8px 24px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    background: white;
+    border-bottom: 2px solid var(--gold);
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a {
+    display: block;
+    padding: 14px 18px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav a:hover { color: var(--navy); border-color: var(--gold); }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── SECTIONS ── */
+  .section { padding: 60px 0 40px; border-bottom: 1px solid rgba(0,0,0,0.07); }
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+  .section-sub {
+    font-size: 13px;
+    color: var(--mid);
+    margin-top: 2px;
+  }
+
+  /* ── DAY HEADERS ── */
+  .day-header {
+    background: var(--navy);
+    color: white;
+    padding: 20px 24px 16px;
+    margin: 40px 0 0;
+    border-left: 4px solid var(--gold);
+  }
+  .day-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .day-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .day-theme {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* ── STOP CARDS ── */
+  .stop-card {
+    border: 1px solid #E0E0E0;
+    margin: 16px 0;
+    background: white;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .stop-name {
+    background: var(--navy);
+    padding: 14px 20px;
+  }
+  .stop-name h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+  }
+  .stop-name .addr {
+    font-size: 12px;
+    color: rgba(180,210,240,0.8);
+    margin-top: 2px;
+    font-style: italic;
+  }
+  .stop-stats {
+    background: var(--blue-light);
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+  }
+  .stat { display: flex; align-items: center; gap: 6px; }
+  .stat-icon { font-size: 14px; }
+  .stat-label { color: var(--navy); font-weight: 500; }
+  .stat-val { color: var(--dark); }
+  .stop-waits {
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+    border-top: 1px solid #E8E8E8;
+  }
+  .wait-bad { color: var(--red); font-weight: 500; }
+  .wait-good { color: var(--green); font-weight: 500; }
+  .stop-book {
+    background: var(--amber-light);
+    padding: 10px 20px;
+    font-size: 13px;
+    border-top: 1px solid #FFE0B2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
+  .stop-book a { color: var(--amber); font-weight: 500; }
+  .stop-line {
+    background: var(--green-light);
+    padding: 10px 20px;
+    font-size: 13px;
+    border-top: 1px solid #C8E6C9;
+  }
+  .line-label { color: var(--green); font-weight: 600; margin-right: 6px; }
+  .stop-body {
+    padding: 16px 20px;
+    background: var(--gold-light);
+    font-size: 14px;
+    color: var(--dark);
+    border-top: 1px solid #EEE;
+    line-height: 1.7;
+  }
+  .insider {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--dark);
+  }
+  .insider strong { color: var(--gold); }
+
+  /* ── INFO BOXES ── */
+  .info-box {
+    border-left: 3px solid var(--gold);
+    background: var(--gold-light);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .info-box.warning {
+    border-color: var(--red);
+    background: var(--red-light);
+  }
+  .info-box.tip {
+    border-color: var(--green);
+    background: var(--green-light);
+  }
+  .info-box.note {
+    border-color: var(--amber);
+    background: var(--amber-light);
+  }
+  .info-box strong { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .info-box.warning strong { color: var(--red); }
+  .info-box.tip strong { color: var(--green); }
+  .info-box.note strong { color: var(--amber); }
+  .info-box strong:not(.inline) { margin-bottom: 6px; }
+
+  /* ── TABLES ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 20px 0;
+  }
+  .data-table th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #EEE;
+    vertical-align: top;
+  }
+  .data-table tr:nth-child(even) td { background: #F8F6F2; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table a { color: var(--navy); }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .badge-red { background: #FFEBEE; color: var(--red); }
+  .badge-green { background: #E8F5E9; color: var(--green); }
+  .badge-amber { background: #FFF8E1; color: var(--amber); }
+  .badge-navy { background: var(--blue-light); color: var(--navy); }
+
+  /* ── CARD GRID ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
+  .card {
+    border: 1px solid #E0E0E0;
+    background: white;
+    padding: 20px;
+  }
+  .card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .card p { font-size: 13.5px; color: var(--mid); line-height: 1.6; }
+  .card .card-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  /* ── DO/DON'T ── */
+  .dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 20px 0;
+  }
+  @media (max-width: 600px) { .dos-donts { grid-template-columns: 1fr; } }
+  .dos, .donts { padding: 20px; }
+  .dos { background: var(--green-light); border-left: 3px solid var(--green); }
+  .donts { background: var(--red-light); border-left: 3px solid var(--red); }
+  .dos h4 { color: var(--green); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+  .donts h4 { color: var(--red); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+  .dos ul, .donts ul { list-style: none; }
+  .dos ul li, .donts ul li { padding: 5px 0; font-size: 13.5px; display: flex; gap: 8px; line-height: 1.5; }
+  .dos ul li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .donts ul li::before { content: '✗'; color: var(--red); font-weight: 700; flex-shrink: 0; }
+
+  /* ── LIST ITEMS ── */
+  .bullet-list { list-style: none; margin: 12px 0; }
+  .bullet-list li {
+    padding: 7px 0 7px 22px;
+    font-size: 14px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    line-height: 1.6;
+  }
+  .bullet-list li:last-child { border-bottom: none; }
+  .bullet-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+    top: 9px;
+  }
+  .bullet-list li strong { color: var(--navy); }
+
+  /* ── EXCHANGE WIDGET ── */
+  .exchange-widget {
+    background: var(--navy);
+    color: white;
+    padding: 28px;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ex-rate { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; color: var(--gold); }
+  .ex-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+  .ex-conversions { display: flex; flex-direction: column; gap: 8px; }
+  .ex-row { display: flex; gap: 12px; font-size: 14px; }
+  .ex-usd { color: rgba(255,255,255,0.6); }
+  .ex-eur { color: white; font-weight: 500; }
+
+  /* ── SAFETY MAP ── */
+  .safety-zones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+  @media (max-width: 600px) { .safety-zones { grid-template-columns: 1fr; } }
+  .zone { padding: 16px; font-size: 13px; }
+  .zone-safe { background: var(--green-light); border-top: 3px solid var(--green); }
+  .zone-caution { background: var(--amber-light); border-top: 3px solid #F57C00; }
+  .zone-avoid { background: var(--red-light); border-top: 3px solid var(--red); }
+  .zone h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  .zone-safe h4 { color: var(--green); }
+  .zone-caution h4 { color: #E65100; }
+  .zone-avoid h4 { color: var(--red); }
+  .zone ul { list-style: none; }
+  .zone ul li { padding: 3px 0; color: var(--dark); }
+
+  /* ── MASTER BOOKING TABLE ── */
+  .booking-priority {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .priority-now { background: #FFEBEE; color: var(--red); }
+  .priority-soon { background: #FFF8E1; color: var(--amber); }
+  .priority-before { background: var(--blue-light); color: var(--navy); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 13px;
+    margin-top: 60px;
+  }
+  footer .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+
+  p { margin-bottom: 12px; }
+  h4.sub { font-size: 14px; color: var(--navy); font-weight: 600; margin: 20px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 12px; }
+  .divider { width: 60px; height: 2px; background: var(--gold); margin: 24px 0; }
+  .text-gold { color: var(--gold); }
+  .text-navy { color: var(--navy); }
+  .text-mid { color: var(--mid); }
+  .fw600 { font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="safari-tip" style="background:#B8963E;color:#1A1A1A;text-align:center;padding:10px 40px;font-family:'DM Sans',sans-serif;font-size:13px;position:relative;">
+  📍 For the interactive map, tap <strong>Share → Open in Safari</strong>. Everything else works right here.
+  <span onclick="document.getElementById('safari-tip').style.display='none'" style="position:absolute;right:16px;top:8px;cursor:pointer;font-weight:700;font-size:16px;">×</span>
+</div>
+
+
+<!-- HERO -->
+<div class="hero">
+  <h1>PARIS</h1>
+  <div class="hero-dates">July 6 – 12, 2026</div>
+  <div class="hero-sub">A complete travel guide for Patty &amp; her girls</div>
+  <div class="hero-hotel">Hôtel Atmosphères · 31 Rue des Écoles · 5th Arrondissement · Latin Quarter</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a data-target="museum-pass">Museum Pass</a>
+  <a data-target="money">Money &amp; Cards</a>
+  <a data-target="exchange">Exchange</a>
+  <a data-target="itinerary">Itinerary</a>
+  <a data-target="food-tour">Food Tour</a>
+  <a data-target="dos-donts">Dos &amp; Don'ts</a>
+  <a data-target="safety">Safety &amp; Areas</a>
+  <a data-target="booking">Booking List</a>
+  <a data-target="curation">Why These?</a>
+  <a data-target="map">Map</a>
+</nav>
+
+<div class="container">
+
+<!-- ══ MUSEUM PASS ══════════════════════════════════════════════════════════ -->
+<section class="section" id="museum-pass">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-title">The Paris Museum Pass</div>
+      <div class="section-sub">Buy this before anything else. It changes the entire trip.</div>
+    </div>
+  </div>
+
+  <p>The Paris Museum Pass covers entry to 50+ museums and monuments including the Louvre, Musée d'Orsay, Musée de l'Orangerie, Sainte-Chapelle, Arc de Triomphe, and Versailles. More importantly, it lets you bypass the ticket purchase queue at every museum — in July, that alone is worth the cost.</p>
+
+  <div class="info-box note">
+    <strong>Recommendation for this trip</strong>
+    Buy the <strong>4-day pass per person (€105 each / €315 for 3)</strong>. Activate on Tuesday July 7. Covers all four museum days: Tuesday, Wednesday, Friday, Saturday.
+  </div>
+
+  <table class="data-table">
+    <thead><tr><th>Pass</th><th>Price (per person)</th><th>Covers</th><th>Break-even</th></tr></thead>
+    <tbody>
+      <tr><td><strong>2-Day</strong></td><td>€85</td><td>Any 2 consecutive days</td><td>3 major museums (Louvre + Orsay + Sainte-Chapelle = €70 alone)</td></tr>
+      <tr><td><strong>4-Day</strong></td><td><strong>€105</strong> ← best value</td><td>Any 4 consecutive days</td><td>4–5 museums — covers all museum days on this itinerary</td></tr>
+      <tr><td><strong>6-Day</strong></td><td>€125</td><td>Any 6 consecutive days</td><td>Only needed if visiting 6+ sites</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box warning">
+    <strong>Critical — Even with the pass, you MUST still book timed-entry slots</strong>
+    The pass covers the cost. The reservation covers entry. You need BOTH. Book free time slots at: Louvre (louvre.fr), Orsay (musee-orsay.fr), Orangerie (musee-orangerie.fr), Sainte-Chapelle (sainte-chapelle.fr), and Versailles if chosen (chateauversailles.fr). Do this before you leave home.
+  </div>
+
+  <h4 class="sub">Where to buy</h4>
+  <ul class="bullet-list">
+    <li><strong>Best option:</strong> <a href="https://www.parismuseumpass.com" target="_blank">parismuseumpass.com</a> — official site, digital delivery</li>
+    <li><strong>On arrival:</strong> CDG Airport tourist office — avoids all museum counter queues</li>
+    <li><strong>Never buy at a museum entrance</strong> — you'll queue to buy the pass that's supposed to let you skip queues</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <h4 class="sub">2026 Individual Ticket Prices (if not using the pass)</h4>
+  <table class="data-table">
+    <thead><tr><th>Museum</th><th>Online Price</th><th>Walk-up Price</th><th>Book at</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Louvre</strong></td><td>€32 (non-EEA, new Jan 2026)</td><td>€32</td><td><a href="https://www.louvre.fr/en" target="_blank">louvre.fr</a></td></tr>
+      <tr><td><strong>Musée d'Orsay</strong></td><td>€16</td><td>€14 + 45-min queue</td><td><a href="https://www.musee-orsay.fr/en" target="_blank">musee-orsay.fr</a></td></tr>
+      <tr><td><strong>Musée de l'Orangerie</strong></td><td>€12.50</td><td>€12.50</td><td><a href="https://www.musee-orangerie.fr/en" target="_blank">musee-orangerie.fr</a></td></tr>
+      <tr><td><strong>Sainte-Chapelle</strong></td><td>€22</td><td>€22 + 30-min queue, sells out</td><td><a href="https://www.sainte-chapelle.fr/en" target="_blank">sainte-chapelle.fr</a></td></tr>
+      <tr><td><strong>Versailles (Passport)</strong></td><td>€35 (high season)</td><td>€35 + 60-90 min queue</td><td><a href="https://en.chateauversailles.fr" target="_blank">chateauversailles.fr</a></td></tr>
+      <tr><td><strong>Petit Palais</strong></td><td colspan="2" style="color:var(--green);font-weight:600">FREE — permanent collection, no booking</td><td><a href="https://www.petitpalais.paris.fr/en" target="_blank">petitpalais.paris.fr</a></td></tr>
+      <tr><td><strong>Bateaux Mouches</strong></td><td>€17 online</td><td>€20 at booth</td><td><a href="https://www.bateaux-mouches.fr/en" target="_blank">bateaux-mouches.fr</a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══ MONEY & CARDS ════════════════════════════════════════════════════════ -->
+<section class="section" id="money">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-title">Money &amp; Credit Cards</div>
+      <div class="section-sub">Use the right card and pay zero fees. Use the wrong one and lose 3% on everything.</div>
+    </div>
+  </div>
+
+  <div class="info-box warning">
+    <strong>The most important thing to know</strong>
+    Standard US credit cards charge a 3% foreign transaction fee on every purchase. On a $5,000 trip, that's $150 in fees for nothing. Use any of the cards below and pay exactly $0 in foreign transaction fees.
+  </div>
+
+  <h4 class="sub">Best Cards to Bring — No Foreign Transaction Fees</h4>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-tag">Best Overall</div>
+      <h4>Chase Sapphire Preferred</h4>
+      <p>3x points on dining, 2x on travel. No foreign transaction fee. Strong travel insurance. $95 annual fee. NerdWallet's Best All-Purpose Travel Card 2023–2026. Use this for every restaurant and museum on the trip.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Best Premium</div>
+      <h4>Chase Sapphire Reserve</h4>
+      <p>3x on travel and dining. Priority Pass lounge access at CDG. $300 travel credit. No foreign transaction fee. High annual fee ($550) but justified for frequent travelers. Use at the airport lounge both ways.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Best Simple</div>
+      <h4>Capital One Venture / Venture X</h4>
+      <p>2x miles on everything. No foreign transaction fee. Simple, no category tracking. Venture X adds Priority Pass and a $300 travel credit. Use if you don't want to think about categories.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Best No Annual Fee</div>
+      <h4>Capital One Quicksilver / SavorOne</h4>
+      <p>All Capital One cards waive foreign transaction fees. Quicksilver: 1.5% cash back everywhere. SavorOne: 3% on dining and entertainment. $0 annual fee. Good backup card.</p>
+    </div>
+  </div>
+
+  <div class="info-box tip">
+    <strong>The Chip + PIN issue (important for Europe)</strong>
+    US cards use chip + signature. Most Paris restaurants and shops are fine with this. However, some self-service machines (Metro ticket kiosks, unattended parking, some museum ticket machines) require chip + PIN. Always carry some cash as backup for kiosk transactions.
+  </div>
+
+  <h4 class="sub">ATM Strategy</h4>
+  <ul class="bullet-list">
+    <li><strong>Best debit card for ATMs:</strong> Charles Schwab Bank High Yield Investor Checking — reimburses ALL ATM fees worldwide, every month. If you don't have this account, get it before the trip.</li>
+    <li><strong>Use bank ATMs only</strong> — not standalone ATMs in tourist areas (airports, attractions). Use BNP Paribas, Société Générale, or Crédit Agricole ATMs.</li>
+    <li><strong>Never use your credit card at an ATM</strong> — cash advances carry 20%+ APR starting the moment of withdrawal.</li>
+    <li><strong>Always choose to pay in euros</strong> (not dollars) when the ATM or terminal offers "Dynamic Currency Conversion." Choosing dollars lets the machine set the rate — always worse.</li>
+    <li><strong>Cash to carry:</strong> €150–200 total for the week — markets, wine bars, tips, and any kiosk purchases. Everything else goes on card.</li>
+  </ul>
+
+  <h4 class="sub">Never Do These</h4>
+  <ul class="bullet-list">
+    <li><strong>Airport currency exchange booths</strong> — typically 8–12% worse than mid-market rate. The Travelex at CDG is especially bad.</li>
+    <li><strong>Hotel currency exchange</strong> — similar poor rates.</li>
+    <li><strong>Traveler's checks</strong> — obsolete, ignored by most vendors.</li>
+    <li><strong>Paying in USD</strong> when offered (Dynamic Currency Conversion) — always choose EUR.</li>
+  </ul>
+</section>
+
+<!-- ══ EXCHANGE RATE ═════════════════════════════════════════════════════════ -->
+<section class="section" id="exchange">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-title">Exchange Rate</div>
+      <div class="section-sub">Current rates and a quick conversion cheat sheet for the trip.</div>
+    </div>
+  </div>
+
+  <div class="exchange-widget">
+    <div>
+      <div class="ex-rate">$1.16</div>
+      <div class="ex-label">Current: 1 EUR = ~$1.16 USD (June 2026)</div>
+      <div class="ex-label" style="margin-top:4px">Or: $1.00 USD = ~€0.86 EUR</div>
+    </div>
+    <div class="ex-conversions">
+      <div class="ex-row"><span class="ex-usd">$20 USD</span><span class="ex-eur">≈ €17</span></div>
+      <div class="ex-row"><span class="ex-usd">$50 USD</span><span class="ex-eur">≈ €43</span></div>
+      <div class="ex-row"><span class="ex-usd">$100 USD</span><span class="ex-eur">≈ €86</span></div>
+      <div class="ex-row"><span class="ex-usd">$200 USD</span><span class="ex-eur">≈ €172</span></div>
+    </div>
+    <div class="ex-conversions">
+      <div class="ex-row"><span class="ex-usd">€10</span><span class="ex-eur">≈ $11.60</span></div>
+      <div class="ex-row"><span class="ex-usd">€50</span><span class="ex-eur">≈ $58</span></div>
+      <div class="ex-row"><span class="ex-usd">€100</span><span class="ex-eur">≈ $116</span></div>
+      <div class="ex-row"><span class="ex-usd">€200</span><span class="ex-eur">≈ $232</span></div>
+    </div>
+  </div>
+
+  <p>The rate in June 2026 hovers around $1.16 per euro. For quick mental math: add 16% to the euro price to get the dollar equivalent. A €16 museum ticket = about $18.50. A €60 dinner = about $70.</p>
+
+  <div class="info-box tip">
+    <strong>Quick mental math trick</strong>
+    Multiply the euro price by 1.16, or just add 15–16% to get a close USD equivalent. When in doubt, round up slightly — it's better to overestimate than be surprised by the bill.
+  </div>
+
+  <h4 class="sub">Track live rates</h4>
+  <ul class="bullet-list">
+    <li><a href="https://wise.com/us/currency-converter/usd-to-eur-rate/" target="_blank">wise.com</a> — mid-market rate, no markup, real-time</li>
+    <li><a href="https://www.google.com/search?q=usd+to+eur" target="_blank">Google "USD to EUR"</a> — instant rate lookup</li>
+    <li>Download the Wise app before departure for live rates on your phone</li>
+  </ul>
+</section>
+
+<!-- ══ ITINERARY ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="itinerary">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-title">Day-by-Day Itinerary</div>
+      <div class="section-sub">With timing, wait times, 2026 prices, and exactly how to get to the front of every line.</div>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day-header">
+    <div class="day-label">Day 1</div>
+    <div class="day-title">Monday, July 6 — Arrive · Champs-Élysées · Notre-Dame · First Dinner</div>
+    <div class="day-theme">Land at 12:30pm. Decompress. Walk. Eat well.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>CDG Airport → Hôtel Atmosphères</h3><div class="addr">31 Rue des Écoles, 5th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-label">Door-to-door:</span><span class="stat-val">45–60 minutes (July traffic)</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-label">G7 cab:</span><span class="stat-val">€60–80 flat rate</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://www.g7.fr/en" target="_blank">g7.fr</a> or app, or +33 1 47 39 47 39 — pre-book before departure</span></div>
+    <div class="stop-line"><span class="line-label">🎯 Tip:</span> Ask the driver to route via the Champs-Élysées — adds 10 minutes, you see it at scale from inside the car. Check the box, move on.</div>
+    <div class="stop-body">Allow 30 minutes to clear CDG immigration + bags. Pre-booked G7 meets you at arrivals — no taxi rank queue, no negotiating. Do NOT accept unlicensed rides.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Notre-Dame Cathedral — Exterior Walk</h3><div class="addr">Île de la Cité · 8-min walk from hotel</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">30–45 minutes</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">Free</span></div>
+    </div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> No queue for the exterior. Walk around the back (Rue du Cloître Notre-Dame) for the flying buttresses — more impressive than the front facade.</div>
+    <div class="stop-body">The restoration is extraordinary to see. Check interior access at <a href="https://www.notredamedeparis.fr/en/visiting/" target="_blank">notredamedeparis.fr</a> — partial reopening is ongoing. The island walk + Pont Saint-Louis to Île Saint-Louis (Berthillon gelato) is the perfect arrival afternoon.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Brasserie des Prés — Dinner</h3><div class="addr">6 Cour du Commerce Saint-André, 6th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">2–2.5 hours</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€60–80 per person with wine</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="http://lanouvellegarde.com" target="_blank">lanouvellegarde.com</a> or +33 1 42 03 44 13 — <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> Reservation only. No walk-in available in July. This is the hardest table on the list — book before purchasing flights.</div>
+    <div class="stop-body">Classic French brasserie on one of the oldest covered passages in Paris (1776). Green velvet, escargot, beef bourguignon, crème brûlée. The ideal first-night Paris dinner. <div class="insider"><strong>Insider:</strong> Ask for a table in the ground-floor room — that's where the room is.</div></div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-header">
+    <div class="day-label">Day 2</div>
+    <div class="day-title">Tuesday, July 7 — Sainte-Chapelle · Saint-Germain · Brasserie Bellanger</div>
+    <div class="day-theme">The most breathtaking room in Paris. Then wander the Left Bank.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Sainte-Chapelle</h3><div class="addr">10 Bd du Palais, 1st arr. · 12-min walk from hotel</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">45–60 minutes inside</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€22 per person (or Museum Pass)</span></div>
+    </div>
+    <div class="stop-waits">
+      <div><span class="wait-bad">🚶 Walk-up July: 30–60 min, often sells out entirely</span></div>
+      <div><span class="wait-good">✓ Pre-booked timed entry: 10–15 min through security</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://www.sainte-chapelle.fr/en" target="_blank">sainte-chapelle.fr</a> — book 9:00am slot, 2–4 weeks ahead <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> TWO security checkpoints — Palais de Justice gates + chapel entrance. Arrive at 8:40am for a 9:00am ticket. Look for the pre-booked ticket lane (separate from walk-up). Body scanner security — normal, no jewelry issue, just be aware.</div>
+    <div class="stop-body">The upper chapel is 15 Gothic windows, 50 feet tall, wall-to-wall stained glass. On a sunny July morning at 9am with a timed ticket, you have the room nearly to yourself for the first 10 minutes. More architecturally overwhelming than Notre-Dame and almost no one books it. <div class="insider"><strong>Insider:</strong> Pray for sun. The glass on an overcast day is significantly less impactful. If the forecast shows heavy cloud on Tuesday, consider swapping to Wednesday when the Orangerie is available.</div></div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>A. Lacroix Pâtissier — Coffee &amp; Pastry</h3><div class="addr">11 Quai de Montebello, 5th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">30–45 minutes</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€8–12 per person</span></div>
+    </div>
+    <div class="stop-line"><span class="line-label">🎯 Tip:</span> No reservation needed. Outdoor seats on the quai fill fast on sunny mornings — arrive before 11am. Order the crème brûlée dessert.</div>
+    <div class="stop-body">Coffee and pastry on the quai directly across the Seine from Notre-Dame. The natural debrief after Sainte-Chapelle.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Brasserie Bellanger — Dinner</h3><div class="addr">140 Rue du Faubourg Poissonnière, 10th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">2–2.5 hours</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€55–70 per person with wine</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://nouvellegardegroupe.fr" target="_blank">nouvellegardegroupe.fr</a> or +33 9 54 00 99 65 — Book BOTH Tuesday July 7 AND Saturday July 11 <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> Reservation only. Fills completely by 7:30pm in July without exception. Book 7:30pm arrival.</div>
+    <div class="stop-body">The best meal of the trip. French onion soup, escargot, duck breast, Paris-Brest. Warm staff, beautiful room. Worth the cab to the 10th. <div class="insider"><strong>Insider:</strong> Order the Paris-Brest. It is the reason for the reservation.</div></div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-header">
+    <div class="day-label">Day 3</div>
+    <div class="day-title">Wednesday, July 8 — Orangerie · Eiffel Tower · Petit Palais · Seine Cruise</div>
+    <div class="day-theme">Monet in the morning. Paris from the water at dusk.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Musée de l'Orangerie</h3><div class="addr">Jardin des Tuileries, 1st arr. · CLOSED TUESDAYS</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">90 minutes</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€12.50 per person (or Museum Pass)</span></div>
+    </div>
+    <div class="stop-waits">
+      <div><span class="wait-bad">🚶 Walk-up July: 30–45 minutes</span></div>
+      <div><span class="wait-good">✓ Pre-booked timed entry (Entrance C): 5–10 minutes</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://www.musee-orangerie.fr/en" target="_blank">musee-orangerie.fr</a> — 9:00am slot, 2–4 weeks ahead <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> Use Entrance C (pre-booked and pass holders) — clearly marked, separate from the walk-up queue. The 9am slot has the oval rooms nearly to yourself. By 11am they're packed shoulder-to-shoulder.</div>
+    <div class="stop-body">Monet's eight Water Lilies panels in two oval rooms Monet designed himself, with zenithal skylights he specified. The rooms were built to his exact dimensions and light requirements. Nothing prepares you for the scale. Also Cézanne, Renoir, Picasso downstairs. <div class="insider"><strong>2026 Bonus:</strong> The Henri Rousseau temporary exhibition runs until July 20 — included in the standard ticket at no extra cost.</div></div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Eiffel Tower — Trocadéro View &amp; Base Walk</h3><div class="addr">Champ de Mars, 7th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">30–45 minutes (exterior only)</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">Free (exterior) / €35+ to go up</span></div>
+    </div>
+    <div class="stop-waits">
+      <div><span class="wait-bad">🚶 Going up (ticket queue): 60–120 minutes in July</span></div>
+      <div><span class="wait-good">✓ Exterior only: No queue at all</span></div>
+    </div>
+    <div class="stop-book"><span>To go up: <a href="https://www.toureiffel.paris/en" target="_blank">toureiffel.paris</a> — book 3–4 months ahead for July</span></div>
+    <div class="stop-line"><span class="line-label">🎯 Correct approach:</span> Cab to Trocadéro. Walk to the railing for the classic photograph. Cross Pont d'Iéna to the base and look straight up — the scale is felt here, not from a platform. Leave. This is the move.</div>
+    <div class="stop-body">The Tower is best at two distances: Trocadéro (the photograph) and the base (the scale). The elevator to the summit adds 90-120 minutes of queuing in July for a view you already know from photographs. The exterior approach takes 30 minutes and delivers the actual experience.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Petit Palais — Free Museum</h3><div class="addr">Av. Winston Churchill, 8th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">60–90 minutes</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">FREE — permanent collection always free</span></div>
+    </div>
+    <div class="stop-waits"><div><span class="wait-good">✓ No queue — walk straight in, no booking required</span></div></div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> None needed. Entrance on Avenue Winston Churchill side, facing the Grand Palais. Open Tue–Sun.</div>
+    <div class="stop-body">Beaux-Arts building with an interior courtyard that stops you cold — colonnaded, garden at center. Most tourists walk past it heading to the Grand Palais. Monet's Seine, Delacroix, Courbet, exceptional decorative arts. The best free hour in Paris. <div class="insider"><strong>Insider:</strong> The courtyard café is one of the most beautiful lunch spots in Paris — usually has tables available.</div></div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Galeries Lafayette — Free Rooftop</h3><div class="addr">40 Bd Haussmann, 9th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">20–30 minutes</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">FREE</span></div>
+    </div>
+    <div class="stop-line"><span class="line-label">🎯 Tip:</span> Elevator to 6th floor, one flight up. Best in late afternoon (4–6pm). Walk through the Art Nouveau dome on the main floor — look up.</div>
+    <div class="stop-body">Panoramic rooftop: Haussmann rooflines, Opéra Garnier, Eiffel Tower in the distance. No ticket, no queue. Less crowded than paid viewpoints.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Bateaux Mouches — Evening Seine Cruise</h3><div class="addr">Pont de l'Alma, Port de la Conférence, 8th arr.</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">1 hour 10 minutes on the water</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€17/person online · €20 at booth · Save €9 total by booking online</span></div>
+    </div>
+    <div class="stop-waits">
+      <div><span class="wait-bad">🚶 At booth: 20–30 min + wait for next boat</span></div>
+      <div><span class="wait-good">✓ Online ticket: Scan phone at gate, board directly</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://www.bateaux-mouches.fr/en/reservation/tickets" target="_blank">bateaux-mouches.fr</a> — undated tickets valid 1 year, buy before you leave home <span class="badge badge-amber">Buy Before Trip</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Line strategy:</span> Online tickets = scan phone at boarding gate, no booth. Aim for 7:30–8pm departure for best light. Request the upper deck (Bateaux Mouches Plus) — fully open, 360° views, no glass reflections for photos.</div>
+    <div class="stop-body">Paris from the water as the lights come on. Passes the Eiffel Tower (lit), Notre-Dame, the Louvre, Pont Neuf. Live commentary in English. <div class="insider"><strong>Insider:</strong> Upper deck, port (left) side going out for Notre-Dame and the Right Bank. Switch to starboard on return for the Eiffel Tower.</div></div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-header">
+    <div class="day-label">Day 4 — Decision Day</div>
+    <div class="day-title">Thursday, July 9 — Le Marais OR Versailles</div>
+    <div class="day-theme">Pick one before booking. They can't be combined in one day.</div>
+  </div>
+
+  <div class="info-box note">
+    <strong>The Decision</strong>
+    <strong>Le Marais:</strong> Oldest covered market in Paris, best independent fashion boutiques, natural wine bars, one of the great historic brasseries. Recommended for this group.<br><br>
+    <strong>Versailles:</strong> The Hall of Mirrors, formal gardens, full royal spectacle. If none of you have been — go. If any of you have been before — do the Marais. Versailles requires leaving by 8:30am.
+  </div>
+
+  <p><strong style="color:var(--navy)">MARAIS stops (if chosen):</strong> Marché des Enfants Rouges (9:30am) → A L'O 1905 (11:30am) → ITEMS Paris (1pm) → Manteigaria (3pm) → Cave Monsieur (5pm) → Bouillon République (dinner)</p>
+  <p><strong style="color:var(--navy)">VERSAILLES (if chosen):</strong> Depart hotel 8:30am → RER C from Saint-Michel (35 min) → Timed palace entry → Hall of Mirrors → Gardens → Musical Fountains (Tuesdays) → Return ~5pm</p>
+
+  <table class="data-table" style="margin-top:16px">
+    <thead><tr><th>Stop</th><th>Time</th><th>Cost</th><th>Book at</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Marché des Enfants Rouges</strong></td><td>9:30–11am</td><td>€15–25</td><td>Walk in — no booking</td></tr>
+      <tr><td><strong>A L'O 1905</strong> (French workwear, ask for Chris)</td><td>11:30am–1pm</td><td>€80–300/piece</td><td>Walk in — opens 11:30am</td></tr>
+      <tr><td><strong>ITEMS Paris</strong> (indie designers)</td><td>1–2pm</td><td>Varies</td><td>Walk in — opens 11am</td></tr>
+      <tr><td><strong>Manteigaria</strong> (Portuguese tarts + espresso)</td><td>3–3:15pm</td><td>€6–7/person</td><td>Walk in</td></tr>
+      <tr><td><strong>Cave Monsieur</strong> (natural wine bar)</td><td>5–7pm</td><td>€12–16/glass</td><td>Walk in — opens 5pm weekdays</td></tr>
+      <tr><td><strong>Bouillon République</strong> (dinner)</td><td>7:30–10pm</td><td>€35–50/person</td><td><a href="https://bouillonlesite.com/bouillon-republique" target="_blank">bouillonlesite.com</a> — book 3–4 weeks ahead</td></tr>
+      <tr><td><strong>Palace of Versailles</strong> (if chosen instead)</td><td>All day</td><td>€35/person (Museum Pass)</td><td><a href="https://en.chateauversailles.fr" target="_blank">chateauversailles.fr</a> — book 3–4 weeks ahead</td></tr>
+    </tbody>
+  </table>
+
+  <!-- DAY 5 -->
+  <div class="day-header">
+    <div class="day-label">Day 5</div>
+    <div class="day-title">Friday, July 10 — Paris by Mouth Food Tour · Musée d'Orsay</div>
+    <div class="day-theme">Cheese, wine, croissants in the morning. The world's best Impressionists in the afternoon.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Paris by Mouth Food Tour</h3><div class="addr">parisbymouth.com</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">2.5–3.5 hours</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€95–130 per person</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://parisbymouth.com/food-tours/" target="_blank">parisbymouth.com</a> — check July schedule, book immediately <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Best fits:</span> Marais food tour or Saint-Germain market walk — both include cheese, wine, chocolate, croissants. Small groups of 6–12, led by food writers. Not a megaphone-and-flag tour.</div>
+    <div class="stop-body">The gold standard Paris food tour operator. All three items from the friend's request — cheese, croissants, wine — are included in every tour format. July tours sell out 3–6 weeks ahead. Check their calendar immediately.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Musée d'Orsay</h3><div class="addr">Esplanade Valéry Giscard d'Estaing, 7th arr. · CLOSED MONDAYS</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">2–2.5 hours</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€16 per person (or Museum Pass)</span></div>
+    </div>
+    <div class="stop-waits">
+      <div><span class="wait-bad">🚶 Walk-up July: 45–90 minutes, regularly exceeds 60 min</span></div>
+      <div><span class="wait-good">✓ Entrance C (pre-booked): 5–15 minutes</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://www.musee-orsay.fr/en/visit/practical-information/admission-prices" target="_blank">musee-orsay.fr</a> — book 2–4 weeks ahead <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 Critical:</span> Entrance A = buy ticket on-site (long queue). Entrance C = pre-booked and pass holders (short queue). They are right next to each other. Go to C. Do not accidentally join the A queue.</div>
+    <div class="stop-body">The world's greatest Impressionist collection in a converted Beaux-Arts train station. Van Gogh's Starry Night Over the Rhône, Monet, Degas, Renoir. The great clock face and the building's nave are architectural experiences equal to the art. <div class="insider"><strong>⚠️ 2026 Alert:</strong> Major renovation works in the reception area run June 10–October 5, 2026. No group tours allowed. Individual visitors fully welcome — just allow extra logistics time at entry.</div></div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day-header">
+    <div class="day-label">Day 6</div>
+    <div class="day-title">Saturday, July 11 — Louvre · Palais Royal · Last Dinner</div>
+    <div class="day-theme">Three things in the Louvre, deeply. Then the best meal of the trip.</div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>The Louvre</h3><div class="addr">Carrousel du Louvre entrance · Rue de Rivoli side · CLOSED TUESDAYS</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">2.5–3 hours</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">€32 per person (or Museum Pass)</span></div>
+    </div>
+    <div class="stop-waits">
+      <div><span class="wait-bad">🚶 Pyramid outdoor queue July: 60–120 minutes</span></div>
+      <div><span class="wait-good">✓ Carrousel underground entrance: 10–20 minutes</span></div>
+    </div>
+    <div class="stop-book"><span><strong style="color:var(--amber)">📌 Book:</strong> <a href="https://www.louvre.fr/en/visit/hours-admission" target="_blank">louvre.fr</a> — 9:00am timed slot, book 2–4 weeks ahead <span class="badge badge-red">Book Now</span></span></div>
+    <div class="stop-line"><span class="line-label">🎯 NON-NEGOTIABLE:</span> Enter ONLY through the Carrousel du Louvre underground mall — accessible from Metro Line 1 (Palais Royal-Musée du Louvre) or walking into the underground shopping center from Rue de Rivoli. The outdoor Pyramid queue in July is 60–120 minutes. Same museum. Different day. Use the underground entrance.</div>
+    <div class="stop-body"><strong>Three targets:</strong> (1) Mona Lisa — go directly on entry, before 10am, before crowds compound. She's smaller than expected; the crowd is the experience. (2) Winged Victory of Samothrace — the staircase approach is one of the great spatial sequences in architecture. (3) Venus de Milo — serene, less crowded. Do not attempt to see everything. <div class="insider"><strong>Insider:</strong> Since Jan 2026, private guided tours with a licensed Guide Conférencier use the Richelieu entrance (dedicated skip-the-line). A 2-hour private guide (€200–300/group) is worth considering for this visit.</div></div>
+  </div>
+
+  <div class="stop-card">
+    <div class="stop-name"><h3>Jardin du Palais Royal — Lunch &amp; Final Browse</h3><div class="addr">8 Rue de Montpensier, 1st arr. · 5-min walk from Louvre</div></div>
+    <div class="stop-stats">
+      <div class="stat"><span class="stat-icon">⏱</span><span class="stat-val">60–90 minutes</span></div>
+      <div class="stat"><span class="stat-icon">💶</span><span class="stat-val">Lunch €25–40 per person · Garden: Free</span></div>
+    </div>
+    <div class="stop-line"><span class="line-label">🎯 Tip:</span> No queue for the garden. Arcade restaurants at lunch: walk-in usually works. Final pass through the arcade shops — vintage eyewear, antique medals, small jewelers.</div>
+    <div class="stop-body">Colonnaded garden one block north of the Louvre, hiding in plain sight. Daniel Buren's striped columns in the courtyard. Small jewelers, rare books, one-of-a-kind shops. One of Paris's great secrets. <div class="insider"><strong>Insider:</strong> Le Grand Véfour in the north arcade is one of the oldest restaurants in Paris (1784). Look through the window even if you don't eat there.</div></div>
+  </div>
+
+</section>
+
+<!-- ══ PARIS BY MOUTH ═══════════════════════════════════════════════════════ -->
+<section class="section" id="food-tour">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-title">Paris by Mouth Food Tour</div>
+      <div class="section-sub">The recommended operator. Book immediately.</div>
+    </div>
+  </div>
+
+  <p>Paris by Mouth is the gold standard for food tours in Paris. Tours are led by food writers, journalists, and chefs — not tour operators. Small groups (6–12 people max), genuine producers, real conversations. The company was explicitly recommended by the friend group's text and it's the right call.</p>
+
+  <h4 class="sub">Best tour options for this group</h4>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-tag">Recommended if doing Versailles on Thursday</div>
+      <h4>Le Marais Food Tour</h4>
+      <p>Covers the Marais neighborhood — cheese, charcuterie, wine, pastry, falafel. Pairs naturally with Friday after the Orsay. Includes cheese, wine, chocolate, croissants as requested.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Recommended if doing Marais on Thursday</div>
+      <h4>Saint-Germain Market Walk</h4>
+      <p>Left Bank food culture — market stalls, cheese caves, wine caves, bakeries. 10 minutes from the hotel. Covers the same food brief with a different neighborhood.</p>
+    </div>
+  </div>
+
+  <div class="info-box warning">
+    <strong>Book immediately — July tours sell out 3–6 weeks in advance</strong>
+    <a href="https://parisbymouth.com/food-tours/" target="_blank">parisbymouth.com/food-tours</a> — check availability and book. Tickets are non-refundable; confirm travel dates first.
+  </div>
+</section>
+
+<!-- ══ DOS AND DON'TS ════════════════════════════════════════════════════════ -->
+<section class="section" id="dos-donts">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div>
+      <div class="section-title">American in Paris — Dos &amp; Don'ts</div>
+      <div class="section-sub">What the guidebooks don't always say clearly.</div>
+    </div>
+  </div>
+
+  <div class="dos-donts">
+    <div class="dos">
+      <h4>✓ Do These</h4>
+      <ul>
+        <li>Say <strong>Bonjour</strong> the moment you walk into any shop, café, or museum — before anything else. It is expected and the tone of your entire interaction depends on it.</li>
+        <li>Say <strong>Merci</strong> on exit and <strong>Au revoir</strong>. These are not optional courtesies — they are basic social requirements.</li>
+        <li>Use <strong>S'il vous plaît</strong> with every request. "Excuse me" is not an opener in France; "Bonjour, s'il vous plaît…" is.</li>
+        <li>Make an attempt at French even if you only know five words. The attempt is more important than the result.</li>
+        <li>Sit down for coffee. Café au comptoir (standing at the bar) is cheaper and faster; café en salle (seated) is the experience. Know which you want and commit.</li>
+        <li>Tip modestly. Service is included (service compris) in the bill by law. Leaving €2–5 on a dinner table is appreciated but not expected. Tipping like you're in New York is unnecessary.</li>
+        <li>Keep your voice at the ambient level of the room. American volume in a French restaurant is noticed.</li>
+        <li>Dress well. Parisians dress with care even for casual occasions. You are not required to wear couture — just make an effort. A sundress is fine; athletic wear to dinner is not.</li>
+        <li>Carry your hotel card. The address in French saves you in any taxi or emergency.</li>
+        <li>Download offline Google Maps for Paris before you land. Saves data and works in the Metro.</li>
+      </ul>
+    </div>
+    <div class="donts">
+      <h4>✗ Don't Do These</h4>
+      <ul>
+        <li>Don't open with <strong>"Do you speak English?"</strong> — open with Bonjour, make an attempt, then ask. The difference in response is significant.</li>
+        <li>Don't ask for a <strong>doggie bag</strong>. Requesting takeout of a restaurant meal is culturally awkward in France. Either finish it or leave it.</li>
+        <li>Don't <strong>tip 20%</strong>. Service is already included. Tipping 20% at a Paris café reads as performative and slightly odd.</li>
+        <li>Don't use <strong>airport currency exchange booths</strong>. Ever. The rate is 8–12% worse than your credit card.</li>
+        <li>Don't <strong>hail unlicensed taxis</strong>, especially at CDG and tourist sites. Use G7 or Bolt app only.</li>
+        <li>Don't leave your <strong>phone on the restaurant table</strong>. It will be gone. Keep it in your bag.</li>
+        <li>Don't <strong>wander Gare du Nord</strong> or the surrounding streets at night without purpose. Be deliberate if passing through.</li>
+        <li>Don't <strong>engage with clipboard scams</strong> — people approaching with clipboards asking you to sign a petition or answer a survey. Walk away without stopping. It's a distraction for pickpockets.</li>
+        <li>Don't <strong>pay in dollars</strong> when the card machine asks — always choose EUR (see Dynamic Currency Conversion).</li>
+        <li>Don't book anything through <strong>third-party resellers</strong> for museums — only official museum websites. Fake tickets are sold in July.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4 class="sub">Scams to Know &amp; Ignore</h4>
+  <ul class="bullet-list">
+    <li><strong>The clipboard petition:</strong> Person approaches with a clipboard, asks you to sign for a cause. While you're distracted, accomplice picks your bag. Walk past without engaging.</li>
+    <li><strong>The gold ring:</strong> Someone "finds" a gold ring on the ground and offers it to you — then demands payment. Ignore and walk.</li>
+    <li><strong>The friendship bracelet:</strong> Someone ties a bracelet on your wrist uninvited, then demands money for it. Don't let anyone touch your wrist.</li>
+    <li><strong>The fake charity:</strong> Groups of young people with printed charity materials collecting donations. Not always legitimate — especially near tourist sites.</li>
+    <li><strong>Fake ticket sellers:</strong> Outside the Eiffel Tower and Louvre, people selling "skip the line" tickets. All fake. Only buy through official websites.</li>
+  </ul>
+
+  <h4 class="sub">Cultural Things That Trip Up Americans</h4>
+  <ul class="bullet-list">
+    <li><strong>Pharmacies are everywhere</strong> and excellent for everything from sunburn to headaches to blister pads. Look for the green cross. They are more accessible than clinics for minor issues.</li>
+    <li><strong>Cafés don't rush you.</strong> Once you have a table, it's yours as long as you want it. The check won't appear until you ask — "L'addition, s'il vous plaît."</li>
+    <li><strong>Lunch is the main meal</strong> in French culture. The midday formule (fixed-price lunch) at almost any restaurant is excellent value — often 3 courses for €18–25. Use it.</li>
+    <li><strong>Shops close for lunch</strong> in some neighborhoods — typically 1–3pm. Don't assume a closed door means permanently closed.</li>
+    <li><strong>Sunday hours are reduced</strong> across the board. Most shops open late (noon) or not at all. Plan Sunday accordingly.</li>
+    <li><strong>Water at restaurants:</strong> Ask for une carafe d'eau (a pitcher of tap water) — it's free and perfectly fine. Bottled water is €4–6 a bottle at most restaurants.</li>
+  </ul>
+</section>
+
+<!-- ══ SAFETY ═════════════════════════════════════════════════════════════ -->
+<section class="section" id="safety">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div>
+      <div class="section-title">Safety, Security &amp; Areas</div>
+      <div class="section-sub">Paris is a safe city. Petty theft is real. Know the difference.</div>
+    </div>
+  </div>
+
+  <div class="info-box tip">
+    <strong>The honest baseline</strong>
+    Paris ranked 74th out of 468 cities globally on the Numbeo safety index. Violent crime against tourists is extremely rare. The concern for travelers is pickpocketing — which is real, active, and entirely preventable with basic awareness. You are in far more danger of losing your phone than being hurt. This is a trade-off most travelers take every time.
+  </div>
+
+  <h4 class="sub">Safety Zone Map</h4>
+  <div class="safety-zones">
+    <div class="zone zone-safe">
+      <h4>✓ Safe — Your Itinerary</h4>
+      <ul>
+        <li>5th arr. — Latin Quarter (your hotel)</li>
+        <li>6th arr. — Saint-Germain</li>
+        <li>1st arr. — Louvre / Tuileries</li>
+        <li>3rd/4th arr. — Le Marais</li>
+        <li>7th arr. — Eiffel Tower / Orsay</li>
+        <li>8th arr. — Champs-Élysées / Petit Palais</li>
+      </ul>
+    </div>
+    <div class="zone zone-caution">
+      <h4>⚠ Use Extra Caution</h4>
+      <ul>
+        <li>Eiffel Tower base (pickpockets target photo-takers)</li>
+        <li>Louvre exterior queue (crowds = opportunity)</li>
+        <li>Châtelet–Les Halles metro (major hub, active)</li>
+        <li>Gare du Nord area (especially at night)</li>
+        <li>Champs-Élysées (tourist density = theft density)</li>
+        <li>Montmartre (beautiful but tourist-heavy)</li>
+      </ul>
+    </div>
+    <div class="zone zone-avoid">
+      <h4>✗ Avoid / Be Deliberate</h4>
+      <ul>
+        <li>Gare du Nord streets at night</li>
+        <li>Barbès-Rochechouart (18th/19th arr.)</li>
+        <li>Stalingrad area (10th/19th arr.)</li>
+        <li>Porte de la Chapelle (18th)</li>
+        <li>Porte de Clignancourt at dusk</li>
+        <li>Pigalle after midnight</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>None of the "avoid" areas are on this itinerary</strong>
+    Everything in this guide — all museums, all restaurants, all neighborhoods — is in the green and amber zones. The areas listed as "avoid" are simply not part of this trip.
+  </div>
+
+  <h4 class="sub">Anti-Pickpocket Protocol</h4>
+  <ul class="bullet-list">
+    <li><strong>Bag worn across the body, in front.</strong> Not on your shoulder, not on your back. Crossbody, zipped, held against your body in crowds.</li>
+    <li><strong>Phone stays in the bag.</strong> Not on the table, not in a back pocket, not dangling in your hand while walking. In the bag when not in active use.</li>
+    <li><strong>Wallet in front pocket or bag.</strong> Never back pocket. Ever.</li>
+    <li><strong>The pattern is always distraction then theft.</strong> Someone bumps you, asks for directions, creates commotion nearby. The moment you're distracted, the phone or wallet is gone. Being aware of this pattern is the entire defense.</li>
+    <li><strong>Highest risk moments:</strong> Taking photos at tourist sites, boarding/exiting the Metro, walking through crowded markets, standing at the Eiffel Tower base.</li>
+    <li><strong>Leave at the hotel:</strong> Passport originals (carry a photo on your phone), excess cash, expensive jewelry you're not wearing that day.</li>
+  </ul>
+
+  <h4 class="sub">Emergency Contacts</h4>
+  <table class="data-table">
+    <thead><tr><th>Service</th><th>Number</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Emergency (Police/Fire/Medical)</strong></td><td>112</td><td>European emergency number — works from any phone</td></tr>
+      <tr><td><strong>Police</strong></td><td>17</td><td>French police direct line</td></tr>
+      <tr><td><strong>SAMU (medical)</strong></td><td>15</td><td>French medical emergency</td></tr>
+      <tr><td><strong>US Embassy Paris</strong></td><td>+33 1 43 12 22 22</td><td><a href="https://fr.usembassy.gov" target="_blank">fr.usembassy.gov</a></td></tr>
+      <tr><td><strong>G7 Taxi</strong></td><td>+33 1 47 39 47 39</td><td>Pre-save in your phone before departure</td></tr>
+      <tr><td><strong>Hôtel Atmosphères</strong></td><td>+33 1 43 26 56 02</td><td>24-hour front desk</td></tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub">If Your Phone or Wallet Is Stolen</h4>
+  <ul class="bullet-list">
+    <li>File a police report immediately — <strong>commissariat de police</strong>. You need this for insurance claims. The nearest to the hotel: Commissariat du 5ème, 4 Rue de la Montagne Sainte-Geneviève.</li>
+    <li>Call your bank immediately to freeze the card — numbers are on the back of the card; photograph these before you leave home.</li>
+    <li>Contact the US Embassy if your passport is stolen: +33 1 43 12 22 22.</li>
+    <li>For phone recovery: enable Find My (iPhone) or Find My Device (Android) before departure. These work in France.</li>
+  </ul>
+
+  <h4 class="sub">Health &amp; Medical</h4>
+  <ul class="bullet-list">
+    <li><strong>Travel insurance:</strong> Buy it. Medi-Assist or GeoBlue for US travelers. Covers medical evacuation, trip cancellation, and lost baggage.</li>
+    <li><strong>Pharmacies</strong> (green cross) are everywhere in the 5th — they are the first stop for any minor issue. They speak English, dispense more without prescriptions than in the US, and are efficient.</li>
+    <li><strong>Nearest hospital:</strong> Hôpital Pitié-Salpêtrière, 47-83 Bd de l'Hôpital (15-min walk from hotel).</li>
+    <li><strong>July heat:</strong> Paris averages 25–28°C in July but occasional heat waves push higher. Stay hydrated, wear sunscreen, and take the afternoon Orangerie visit seriously — the oval rooms are air-conditioned.</li>
+  </ul>
+</section>
+
+<!-- ══ MASTER BOOKING ════════════════════════════════════════════════════════ -->
+<section class="section" id="booking">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div>
+      <div class="section-title">Master Booking List</div>
+      <div class="section-sub">Everything to book, in priority order, with links.</div>
+    </div>
+  </div>
+
+  <div class="info-box warning">
+    <strong>Book these this week — some July slots are already filling</strong>
+    Museum tickets for July should be purchased 2–4 weeks in advance. Restaurant reservations (especially Bellanger and Bouillon) should be booked immediately. The Paris Museum Pass can be bought at CDG on arrival but is easier purchased in advance.
+  </div>
+
+  <table class="data-table">
+    <thead><tr><th>What</th><th>When</th><th>Cost (3 people)</th><th>Priority</th><th>Book at</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Paris Museum Pass — 4-day, x3</strong></td>
+        <td>Activate Tue July 7</td>
+        <td>€315 total</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://www.parismuseumpass.com" target="_blank">parismuseumpass.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>Brasserie des Prés — dinner</strong></td>
+        <td>Mon July 6</td>
+        <td>~€210</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="http://lanouvellegarde.com" target="_blank">lanouvellegarde.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>Brasserie Bellanger — dinner x2</strong></td>
+        <td>Tue July 7 + Sat July 11</td>
+        <td>~€390 total</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://nouvellegardegroupe.fr" target="_blank">nouvellegardegroupe.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Bouillon République — dinner</strong></td>
+        <td>Thu July 9</td>
+        <td>~€135</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://bouillonlesite.com/bouillon-republique" target="_blank">bouillonlesite.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>Paris by Mouth Food Tour</strong></td>
+        <td>Fri July 10 morning</td>
+        <td>~€285–390</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://parisbymouth.com/food-tours/" target="_blank">parisbymouth.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>Sainte-Chapelle — 9:00am timed entry</strong></td>
+        <td>Tue July 7</td>
+        <td>Covered by Pass</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://www.sainte-chapelle.fr/en/visit/practical-information" target="_blank">sainte-chapelle.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Musée de l'Orangerie — 9:00am</strong></td>
+        <td>Wed July 8</td>
+        <td>Covered by Pass</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://www.musee-orangerie.fr/en/article/rates-and-ticket-office" target="_blank">musee-orangerie.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Musée d'Orsay — timed entry</strong></td>
+        <td>Fri July 10</td>
+        <td>Covered by Pass</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://www.musee-orsay.fr/en/visit/practical-information/admission-prices" target="_blank">musee-orsay.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Louvre — 9:00am timed entry</strong></td>
+        <td>Sat July 11</td>
+        <td>Covered by Pass</td>
+        <td><span class="booking-priority priority-now">Book Now</span></td>
+        <td><a href="https://www.louvre.fr/en/visit/hours-admission" target="_blank">louvre.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Versailles Passport — if chosen</strong></td>
+        <td>Thu July 9</td>
+        <td>Covered by Pass</td>
+        <td><span class="booking-priority priority-soon">If choosing Versailles</span></td>
+        <td><a href="https://en.chateauversailles.fr/2026-ticketing" target="_blank">chateauversailles.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Bateaux Mouches — undated tickets</strong></td>
+        <td>Wed July 8 evening</td>
+        <td>€51 total</td>
+        <td><span class="booking-priority priority-before">Before Departure</span></td>
+        <td><a href="https://www.bateaux-mouches.fr/en/reservation/tickets" target="_blank">bateaux-mouches.fr</a></td>
+      </tr>
+      <tr>
+        <td><strong>Brasserie Dubillot — dinner</strong></td>
+        <td>Wed July 8</td>
+        <td>~€175</td>
+        <td><span class="booking-priority priority-soon">2 Weeks Ahead</span></td>
+        <td><a href="https://nouvellegardegroupe.com" target="_blank">nouvellegardegroupe.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>G7 cab — CDG arrival pre-book</strong></td>
+        <td>Mon July 6, 12:30pm CDG</td>
+        <td>€60–80</td>
+        <td><span class="booking-priority priority-before">1 Week Ahead</span></td>
+        <td><a href="https://www.g7.fr/en" target="_blank">g7.fr</a> or +33 1 47 39 47 39</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <strong>Estimated total pre-booked spend (3 people)</strong>
+    Museum passes €315 · Restaurants ~€1,600 · Food tour ~€350 · Seine cruise €51 · CDG cab ~€70 = <strong>approximately €2,400 pre-booked</strong>. Daily food, wine, shopping, incidentals, and cabs are additional — budget €150–200 per person per day for everything else.
+  </div>
+</section>
+
+<!-- ══ QUICK REFERENCE ════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div>
+      <div class="section-title">Quick Reference</div>
+      <div class="section-sub">Save these numbers in your phone before departure.</div>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-tag">Transport</div>
+      <h4>Getting Around</h4>
+      <p><strong>G7 Taxi:</strong> +33 1 47 39 47 39 / g7.fr<br>
+      <strong>Bolt app:</strong> Download before departure<br>
+      <strong>Metro:</strong> Lines 7 and 10 from hotel area<br>
+      <strong>RER B → CDG:</strong> From Saint-Michel Notre-Dame (10-min walk), 35 min<br>
+      <strong>RER C → Versailles:</strong> From Saint-Michel Notre-Dame, 35 min</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Hotel</div>
+      <h4>Hôtel Atmosphères</h4>
+      <p><strong>Address:</strong> 31 Rue des Écoles, 75005 Paris<br>
+      <strong>Metro:</strong> Maubert-Mutualité (200m)<br>
+      <strong>Phone:</strong> +33 1 43 26 56 02<br>
+      <strong>Amenities:</strong> Sauna, fitness room, honesty bar, garden, 24-hour desk<br>
+      <strong>Nearest pharmacy:</strong> Multiple on Rue des Écoles and Rue Monge</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Emergency</div>
+      <h4>Emergency Numbers</h4>
+      <p><strong>All emergencies:</strong> 112<br>
+      <strong>Police:</strong> 17<br>
+      <strong>Medical SAMU:</strong> 15<br>
+      <strong>US Embassy:</strong> +33 1 43 12 22 22<br>
+      <strong>Lost card (Chase):</strong> +1 302 594 8200<br>
+      <strong>Lost card (Cap One):</strong> +1 804 934 2001</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Useful Apps</div>
+      <h4>Download Before Departure</h4>
+      <p><strong>Google Maps</strong> — download Paris offline<br>
+      <strong>Wise</strong> — live exchange rates<br>
+      <strong>G7 Taxi</strong> — pre-booked cabs<br>
+      <strong>Bolt</strong> — rideshare backup<br>
+      <strong>Citymapper</strong> — Paris transit routing<br>
+      <strong>Google Translate</strong> — camera translation of menus</p>
+    </div>
+  </div>
+
+  <h4 class="sub">Museum Closure Days — Don't Get Caught</h4>
+  <table class="data-table">
+    <thead><tr><th>Museum</th><th>Closed</th><th>Your Day</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Musée d'Orsay</strong></td><td>MONDAYS</td><td>Friday July 10</td><td><span class="badge badge-green">✓ Open</span></td></tr>
+      <tr><td><strong>Musée de l'Orangerie</strong></td><td>TUESDAYS</td><td>Wednesday July 8</td><td><span class="badge badge-green">✓ Open</span></td></tr>
+      <tr><td><strong>Louvre</strong></td><td>TUESDAYS</td><td>Saturday July 11</td><td><span class="badge badge-green">✓ Open</span></td></tr>
+      <tr><td><strong>Palace of Versailles</strong></td><td>MONDAYS</td><td>Thursday July 9 (if chosen)</td><td><span class="badge badge-green">✓ Open</span></td></tr>
+      <tr><td><strong>Petit Palais</strong></td><td>MONDAYS</td><td>Wednesday July 8</td><td><span class="badge badge-green">✓ Open</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">Bon voyage.</div>
+  <p>Paris is better when you know where you're going — and how to get to the front of the line.</p>
+  <p style="margin-top:16px;font-size:11px;opacity:0.5">Guide prepared for Patty · July 6–12, 2026 · Hôtel Atmosphères, Paris 5th · All prices and wait times reflect 2026 data. Verify reservations and museum hours before departure as conditions may change.</p>
+</footer>
+
+
+<script>
+(function(){
+  function scrollToTarget(id){
+    var el=document.getElementById(id);
+    if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); }
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-target]');
+    if(a){ e.preventDefault(); scrollToTarget(a.getAttribute('data-target')); }
+  });
+})();
+</script>
+
+</body>
+</html>
+
+<!-- ══ CURATION RATIONALE ═══════════════════════════════════════════════════ -->
+<style>
+.curation-section { padding: 60px 0 40px; border-bottom: 1px solid rgba(0,0,0,0.07); }
+.curation-item { margin: 0 0 32px 0; border: 1px solid #E0E0E0; background: white; overflow: hidden; }
+.curation-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 18px 22px 14px; background: #F8F6F2; border-bottom: 1px solid #EBEBEB; }
+.curation-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--navy); font-weight: 400; }
+.curation-type { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.curation-rating { text-align: right; flex-shrink: 0; }
+.rating-stars { color: #F4B400; font-size: 14px; }
+.rating-count { font-size: 11px; color: var(--mid); }
+.curation-body { padding: 20px 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 640px) { .curation-body { grid-template-columns: 1fr; } }
+.curation-col h5 { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #EEE; }
+.curation-col p { font-size: 13.5px; color: var(--dark); line-height: 1.65; }
+.alt-item { background: var(--blue-light); padding: 12px 16px; margin: 4px 0; font-size: 13px; }
+.alt-item strong { color: var(--navy); display: block; margin-bottom: 2px; }
+.alt-item span { color: var(--mid); }
+.not-included { padding: 20px 22px; background: var(--gold-light); border-top: 1px solid #EEE; }
+.not-included h5 { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.not-included p { font-size: 13.5px; color: var(--dark); line-height: 1.65; }
+
+/* ── MAP ── */
+.map-section { padding: 60px 0 40px; border-bottom: 1px solid rgba(0,0,0,0.07); }
+#paris-map { width: 100%; height: 560px; border: 1px solid #DDD; background: #EEE; position: relative; overflow: hidden; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--dark); }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.map-note { font-size: 13px; color: var(--mid); margin-top: 10px; font-style: italic; }
+
+/* Walk time pills on map */
+.walk-info { background: white; border: 1px solid #DDD; padding: 10px 16px; margin: 4px 0; border-radius: 2px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+.walk-from { color: var(--dark); }
+.walk-time { color: var(--navy); font-weight: 600; background: var(--blue-light); padding: 2px 8px; border-radius: 2px; font-size: 12px; }
+</style>
+
+<!-- CURATION SECTION -->
+<div class="container">
+<section class="curation-section" id="curation">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div>
+      <div class="section-title">Why These Choices — &amp; What Else Is Out There</div>
+      <div class="section-sub">The reasoning behind every selection, and notable alternatives if the group wants to swap anything out.</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:28px">Every place on this list was chosen for a specific reason tied to this group's profile: three women with a design and interior design sensibility, a love of food and fashion, a moderate pace, and a finite six days. The alternatives listed below are genuinely good — they were considered and left off for specific reasons, not because they're inferior.</p>
+
+  <!-- SAINTE-CHAPELLE -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Monument · Day 2</div><div class="curation-name">Sainte-Chapelle</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.6 · 48,973 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>This is the one Paris experience that almost no one anticipates correctly. Every photograph understates it. The upper chapel is architecturally singular — a Gothic structure whose walls are almost entirely dissolved into stained glass, 15 windows 50 feet tall enclosing a space barely larger than a living room. For someone with Patty's design eye, it's the most concentrated architectural experience in the city. It's 12 minutes from the hotel. It costs €22. Virtually no one books it. That combination — extreme quality, low competition, perfect proximity — made it an automatic first inclusion.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives &amp; Why Not</h5>
+        <div class="alt-item"><strong>Notre-Dame Cathedral</strong><span>Larger, more famous, currently being restored. Interior now reopened post-2019 fire. Worth seeing but the experience is diluted by scale and crowds. Sainte-Chapelle is more concentrated and more surprising.</span></div>
+        <div class="alt-item"><strong>Sacré-Cœur, Montmartre</strong><span>Beautiful hilltop setting but the basilica interior is ordinary. The neighborhood is overrun with tourists in July. Left off due to crowd density and lower design payoff.</span></div>
+        <div class="alt-item"><strong>Saint-Sulpice</strong><span>Vast neoclassical church near Saint-Germain. Delacroix murals in the first chapel are extraordinary. Worth a quick stop if passing — no booking needed, free.</span></div>
+      </div>
+    </div>
+    <div class="not-included"><h5>If They Want to Add Notre-Dame</h5><p>Notre-Dame is an 8-minute walk from the hotel and earns an exterior visit on Day 1 regardless. The interior (recently restored) is accessible via timed booking at notredamedeparis.fr. It's on the route and worth 20 minutes inside — just don't replace Sainte-Chapelle with it.</p></div>
+  </div>
+
+  <!-- ORANGERIE -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Museum · Day 3</div><div class="curation-name">Musée de l'Orangerie</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.6 · 23,876 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>The Orangerie was chosen over all other Impressionist options because it offers something the others can't: a purpose-built, spatially intentional experience. Monet designed the oval rooms himself — the dimensions, the zenithal skylights, the progression between the two rooms. You're not looking at art hung on walls; you're inside a constructed environment Monet specified. For an interior designer this distinction matters. The museum is also compact enough to see in 90 minutes without fatigue, and the Rousseau exhibition running until July 20 is included in the base ticket — a significant bonus.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives &amp; Why Not</h5>
+        <div class="alt-item"><strong>Musée Marmottan Monet</strong><span>The largest Monet collection in the world, in a beautiful 16th-arrondissement mansion. Worth it for serious Monet devotees. Left off because it requires a dedicated half-day and is farther from the itinerary's geographic core.</span></div>
+        <div class="alt-item"><strong>Musée Jacquemart-André</strong><span>Magnificent private mansion turned museum, Italian Renaissance collection, extraordinary tea room. Genuinely overlooked gem. A strong alternative if the Orangerie is sold out.</span></div>
+        <div class="alt-item"><strong>Centre Pompidou</strong><span>Closed for major renovation until 2030. Not currently an option.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D'ORSAY -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Museum · Day 5</div><div class="curation-name">Musée d'Orsay</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.8 · 113,963 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>Non-negotiable for this group. The Orsay holds the world's greatest Impressionist collection, and the building — a Beaux-Arts train station converted in 1986 — is architecturally extraordinary in its own right. The great clock faces, the nave, the height of the former station hall. It was placed on Friday rather than earlier in the week because the Paris by Mouth food tour anchors the morning, and having Sainte-Chapelle and the Orangerie earlier means arriving at the Orsay with context rather than cold. Pairing it with a leisurely afternoon on Rue Mouffetard keeps the day from over-programming.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives &amp; Why Not</h5>
+        <div class="alt-item"><strong>Musée Rodin</strong><span>Beautiful mansion and sculpture garden with The Thinker and The Kiss. Worth adding if there's a free afternoon — no timed entry required, Museum Pass covers it. Could replace the Galeries Lafayette rooftop on Day 3.</span></div>
+        <div class="alt-item"><strong>Musée Picasso</strong><span>In the Marais, strong collection across all Picasso periods. Museum Pass covers it. Could be added on the Marais day without disrupting the itinerary.</span></div>
+        <div class="alt-item"><strong>Musée de Cluny</strong><span>Medieval art and Roman ruins, 5-minute walk from the hotel. The Lady and the Unicorn tapestries are extraordinary. Worth 90 minutes on any free afternoon — and it's steps from the front door.</span></div>
+      </div>
+    </div>
+    <div class="not-included"><h5>Note for 2026</h5><p>Major renovation works in the Orsay reception area run June 10–October 5, 2026. No groups permitted. Individual visitors fully welcome. Use Entrance C (pre-booked visitors) and allow extra time for modified entry flow.</p></div>
+  </div>
+
+  <!-- PETIT PALAIS -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Museum · Day 3 · Free</div><div class="curation-name">Petit Palais</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.7 · 24,890 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>The Petit Palais earns its slot because of a simple equation: zero cost, no queue, extraordinary interior, and a courtyard that has stopped interior designers cold for 125 years. Its inclusion is also a statement about the itinerary's philosophy — that the best experiences in Paris are frequently the overlooked ones, and that a free afternoon in a magnificent Beaux-Arts building is better than an hour in a tourist queue. It pairs geographically with the Orangerie and Galeries Lafayette on Day 3, requiring no additional transit.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives &amp; Why Not</h5>
+        <div class="alt-item"><strong>Grand Palais</strong><span>The Petit Palais's larger neighbor. Hosts major temporary exhibitions but charges €15–20 per show. The Petit Palais permanent collection is free and architecturally superior. If there's a specific Grand Palais exhibition running in July, it may be worth adding.</span></div>
+        <div class="alt-item"><strong>Musée des Arts Décoratifs</strong><span>Decorative arts and fashion museum adjacent to the Louvre. Extremely relevant for Patty's professional interests — furniture, textiles, historic interior design. A strong swap for the Petit Palais if she wants more design-specific content.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOUVRE -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Museum · Day 6</div><div class="curation-name">The Louvre</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.7 · 367,614 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>The Louvre is on the list because it was specifically requested, and because it belongs on any Paris itinerary regardless. Its placement on the last full day is deliberate: by Saturday the group has already seen the Orangerie and Orsay, giving them Impressionist and art historical context they'll lack on Day 1. They also arrive knowing exactly what they want to see rather than feeling obligated to see everything. The three-target strategy — Mona Lisa, Winged Victory, Venus de Milo — is designed to make the visit feel focused rather than overwhelming. The Louvre is inexhaustible; the goal is to leave satisfied, not exhausted.</p>
+      </div>
+      <div class="curation-col">
+        <h5>What to Skip Inside</h5>
+        <div class="alt-item"><strong>The Egyptian Antiquities wing</strong><span>Extraordinary but requires a separate 2-hour commitment. Save for a dedicated return trip.</span></div>
+        <div class="alt-item"><strong>The Dutch/Flemish galleries</strong><span>Vermeer, Rembrandt — world-class, but not the right entry point for a first or casual Louvre visit. These reward slow return visits.</span></div>
+        <div class="alt-item"><strong>The Richelieu wing (sculpture)</strong><span>French and Northern European sculpture. Beautiful but typically skipped on a first visit. With a private guide using the Richelieu entrance (available since Jan 2026), this becomes accessible on a curated path.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PALAIS ROYAL -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Garden &amp; Arcade · Days 3 &amp; 6 · Free</div><div class="curation-name">Jardin du Palais Royal</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.7 · 9,670 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here — Twice</h5>
+        <p>The Palais Royal appears twice in the itinerary because it's worth two visits and each serves a different purpose. On Day 3 it's a lunch anchor between the Petit Palais and Galeries Lafayette — the garden provides a natural pause, and the arcade restaurants deliver a quiet meal between active sightseeing. On Day 6 it's the post-Louvre debrief and final shopping loop — the arcade shops (vintage eyewear, antique medals, small jewelers) are exactly the kind of places Patty and Patty's friends will find rewarding. The Buren columns are an architectural conversation piece regardless of which side of the debate they land on.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives &amp; Why Not</h5>
+        <div class="alt-item"><strong>Jardin du Luxembourg</strong><span>10-minute walk from the hotel, one of Paris's great gardens. Beautiful in July. A perfect afternoon alternative if the group wants a slower day — bring food from Rue Mouffetard and sit in the famous green metal chairs.</span></div>
+        <div class="alt-item"><strong>Tuileries Garden</strong><span>Already on Day 3 as a walkthrough between the Orangerie and the Palais Royal. The full Tuileries is worth a dedicated hour if there's appetite for more garden time.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRASSERIE DES PRES -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Restaurant · Monday Dinner</div><div class="curation-name">Brasserie des Prés</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.7 · 8,367 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>The first dinner sets the tone for the whole trip. Brasserie des Prés was chosen because the location — the Cour du Commerce Saint-André, one of the oldest covered passages in Paris (1776) — is a Paris experience in itself, not just a restaurant. The passage is beautiful, the room is beautiful, the food is classic French at a high level. After a transatlantic flight, the group needs a dinner that feels like Paris without requiring adventurousness or decision fatigue. This is that dinner. It's also 15 minutes from the hotel on foot, eliminating any navigation complexity on the first night.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives if Unavailable</h5>
+        <div class="alt-item"><strong>Allard</strong><span>Classic Saint-Germain bistro on Rue de l'Éperon, classic since 1931. Duck with olives, escargot. Similar neighborhood, similar quality. Backup if des Prés is booked.</span></div>
+        <div class="alt-item"><strong>Le Comptoir du Relais</strong><span>Chef Yves Camdeborde's legendary Saint-Germain bistro. Exceptional food, notoriously difficult to book. Worth trying if they can get a reservation — it's in the same neighborhood.</span></div>
+        <div class="alt-item"><strong>Lapérouse</strong><span>Historic restaurant on the quai with private dining rooms etched by 18th-century courtesans with their diamonds. Theatrical, expensive, unforgettable. A special occasion option.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BELLANGER -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Restaurant · Tuesday &amp; Saturday Dinner</div><div class="curation-name">Brasserie Bellanger</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.7 · 6,041 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here — Twice</h5>
+        <p>Bellanger is on the list twice because it earned it. The food is exceptional, the room delivers, and the staff are warm in a way that's not guaranteed at Paris brasseries. It was booked twice (Tuesday and Saturday) because the last dinner of any trip should go to the best place encountered during it — and Bellanger is very likely to be that place. If another restaurant on the trip surprises them, the Saturday reservation can be changed. But the safety of knowing the last dinner is secured at a place this good is worth the double booking.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives if It Can't Be Booked</h5>
+        <div class="alt-item"><strong>Le Bon George</strong><span>9th arrondissement, similar aesthetic — beautiful room, classic French, warm staff. Slightly easier to book than Bellanger in July.</span></div>
+        <div class="alt-item"><strong>Brasserie Lutetia</strong><span>Inside the Hôtel Lutetia, 6th arrondissement. More grand, more formal, more expensive. Worth it for a special occasion dinner.</span></div>
+        <div class="alt-item"><strong>Au Passage</strong><span>11th arrondissement natural wine bar and small plates. Excellent, different format — sharing dishes, no tablecloths. A strong alternative for the Tuesday slot if Bellanger is unavailable.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOUILLON -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Restaurant · Thursday Dinner</div><div class="curation-name">Bouillon République</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.7 · 37,406 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>37,000 Google reviews at 4.7 stars is not noise — it's consensus. Bouillon République was chosen because the bouillon format is a specifically Parisian institution with no American equivalent, making it a genuine cultural experience rather than just a meal. The historic room, the democratic pricing, the volume and energy — this is Paris feeding itself, not Paris performing for tourists. The bone marrow and duck parfait are the correct orders, and the mille-feuille is the correct dessert. It's also the most affordable dinner on the list, which creates useful budget space for wine.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Alternatives if It Can't Be Booked</h5>
+        <div class="alt-item"><strong>Bouillon Chartier</strong><span>The original Paris bouillon, open since 1896. No reservations taken — pure walk-in, which creates a wait. More historic room than République, more chaotic service. Worth the experience if Bouillon République is unavailable.</span></div>
+        <div class="alt-item"><strong>Chez Janou</strong><span>Marais Provençal bistro. Great for the Marais day if staying in the neighborhood for dinner. Different format — more intimate, Southern French.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- A L'O -->
+  <div class="curation-item">
+    <div class="curation-header">
+      <div><div class="curation-type">Fashion Boutique · Le Marais</div><div class="curation-name">A L'O — 1905</div></div>
+      <div class="curation-rating"><div class="rating-stars">★★★★★</div><div class="rating-count">4.9 · 656 reviews</div></div>
+    </div>
+    <div class="curation-body">
+      <div class="curation-col">
+        <h5>Why It's Here</h5>
+        <p>A L'O was chosen over the obvious luxury alternatives (Rue Saint-Honoré flagships, Galeries Lafayette designer floors) because the pieces are genuinely unavailable in the US market, the prices are rational rather than luxury-tier, and the shopkeeper Chris provides an experience that no department store can replicate. For an interior designer who values craftsmanship and provenance, French workwear brands like Vetra represent exactly the aesthetic intelligence she brings to her own work. The 4.9-star rating on 656 reviews is driven almost entirely by people mentioning Chris by name — a signal that the experience is personal and consistent.</p>
+      </div>
+      <div class="curation-col">
+        <h5>Additional Shopping Options</h5>
+        <div class="alt-item"><strong>Merci Concept Store</strong><span>Boulevard Beaumarchais, Marais. Large, curated multi-brand store with furniture, fashion, and home goods. Design-relevant for Patty's work. Worth 45 minutes if time allows.</span></div>
+        <div class="alt-item"><strong>Rue Saint-Honoré</strong><span>The luxury flagships — Hermès, Chanel, Saint Laurent. Worth walking even without buying. The Hermès flagship at 24 Rue du Faubourg Saint-Honoré is architecturally significant and the sales experience is worth noting.</span></div>
+        <div class="alt-item"><strong>Le Bon Marché</strong><span>The grande dame of Paris department stores, 7th arrondissement. More curated than Galeries Lafayette, stronger in home goods and interior design objects. Particularly relevant for Patty's professional interests.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT DIDN'T MAKE THE CUT -->
+  <div style="background: var(--navy); color: white; padding: 28px; margin: 32px 0;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:26px; margin-bottom:16px; color:var(--gold)">What Was Left Off — and Why</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+      <div>
+        <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-bottom:10px">Considered &amp; Excluded</div>
+        <div style="font-size:13.5px; line-height:1.8; color:rgba(255,255,255,.85)">
+          <strong style="color:white">Montmartre / Sacré-Cœur</strong> — Beautiful neighborhood, unremarkable basilica, extreme July tourist density. The residential streets below are worth wandering on a quieter trip but not worth the crowd exposure in July.<br><br>
+          <strong style="color:white">Versailles (as a given)</strong> — Included as an option but not a default. A full day, heavy crowds in July, and it displaces an entire neighborhood day. The Marais is the more memorable choice for this group.<br><br>
+          <strong style="color:white">Eiffel Tower elevator</strong> — Requested as a "see it, not hang out at it" experience, which is exactly how this guide treats it. 90 minutes of July queuing for a view you already know from photographs is not the right trade.<br><br>
+          <strong style="color:white">Michelin-starred restaurants</strong> — Deliberately excluded. The format (long tasting menus, formal pacing) doesn't fit a group that wants conversation, flexibility, and a bottle of Burgundy. The four brasseries deliver better dining experiences for this trip's dynamic.
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-bottom:10px">If There's a Free Afternoon</div>
+        <div style="font-size:13.5px; line-height:1.8; color:rgba(255,255,255,.85)">
+          <strong style="color:white">Musée de Cluny</strong> — 5-minute walk from the hotel. Medieval art and actual Roman ruins. The Lady and the Unicorn tapestries are extraordinary. Museum Pass covers it.<br><br>
+          <strong style="color:white">Musée Rodin</strong> — Left Bank sculpture garden with The Thinker and The Kiss. 45 minutes, Museum Pass covers it. Strong addition to Day 3 or 5.<br><br>
+          <strong style="color:white">Le Bon Marché</strong> — 7th arrondissement. The best-curated department store in Paris for design-oriented shoppers. Excellent home goods floor.<br><br>
+          <strong style="color:white">Jardin du Luxembourg</strong> — 10-minute walk from the hotel. Paris's most beautiful garden. Bring cheese and wine from Rue Mouffetard and spend an hour in the green chairs.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ INTERACTIVE MAP ═══════════════════════════════════════════════════════ -->
+<section class="map-section" id="map">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div>
+      <div class="section-title">Paris Map — Every Location</div>
+      <div class="section-sub">All sights, restaurants, landmarks, and the hotel. Walking times from the hotel shown below the map.</div>
+    </div>
+  </div>
+
+  <div class="map-legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#1B3A5C"></div> Your Hotel</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#B8963E"></div> Museums &amp; Monuments</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#C62828"></div> Restaurants &amp; Dining</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div> Bars &amp; Markets</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6A1B9A"></div> Shopping &amp; Experiences</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#01579B"></div> Landmarks &amp; Views</div>
+  </div>
+
+  <div id="paris-map"><div id="map-fallback" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;color:#666;font-family:'DM Sans',sans-serif;">
+    <div style="font-size:32px;margin-bottom:12px;">🗺️</div>
+    <div style="font-size:15px;font-weight:600;color:#1B3A5C;margin-bottom:6px;">Interactive map loads in Safari</div>
+    <div style="font-size:13px;max-width:360px;">If you're viewing this from a text message, tap Share → Open in Safari to load the live map. The walking-times list below works everywhere.</div>
+  </div></div>
+  <p class="map-note">Click any pin for details. Map loads with your complete itinerary plotted across all 6 days.</p>
+
+  <div style="margin-top:28px">
+    <h4 class="sub">Walking Times from Hôtel Atmosphères</h4>
+    <p style="font-size:13.5px; color:var(--mid); margin-bottom:16px">All times are approximate walking times at a comfortable pace. Paris is very walkable — most of the itinerary can be done on foot.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+      <div class="walk-info"><span class="walk-from">Notre-Dame Cathedral</span><span class="walk-time">8 min</span></div>
+      <div class="walk-info"><span class="walk-from">Sainte-Chapelle</span><span class="walk-time">12 min</span></div>
+      <div class="walk-info"><span class="walk-from">A. Lacroix Pâtissier</span><span class="walk-time">10 min</span></div>
+      <div class="walk-info"><span class="walk-from">Brasserie des Prés</span><span class="walk-time">15 min</span></div>
+      <div class="walk-info"><span class="walk-from">Musée de l'Orangerie</span><span class="walk-time">25 min</span></div>
+      <div class="walk-info"><span class="walk-from">Louvre Museum</span><span class="walk-time">22 min</span></div>
+      <div class="walk-info"><span class="walk-from">Jardin du Palais Royal</span><span class="walk-time">24 min</span></div>
+      <div class="walk-info"><span class="walk-from">Musée d'Orsay</span><span class="walk-time">28 min</span></div>
+      <div class="walk-info"><span class="walk-from">Petit Palais</span><span class="walk-time">35 min</span></div>
+      <div class="walk-info"><span class="walk-from">Eiffel Tower (base)</span><span class="walk-time">45 min</span></div>
+      <div class="walk-info"><span class="walk-from">Bateaux Mouches (Pont de l'Alma)</span><span class="walk-time">42 min</span></div>
+      <div class="walk-info"><span class="walk-from">Galeries Lafayette Rooftop</span><span class="walk-time">30 min by Metro (line 7)</span></div>
+      <div class="walk-info"><span class="walk-from">Le Marais (Marché Enfants Rouges)</span><span class="walk-time">28 min</span></div>
+      <div class="walk-info"><span class="walk-from">Manteigaria</span><span class="walk-time">22 min</span></div>
+      <div class="walk-info"><span class="walk-from">A L'O 1905</span><span class="walk-time">30 min</span></div>
+      <div class="walk-info"><span class="walk-from">Cave Monsieur</span><span class="walk-time">30 min</span></div>
+      <div class="walk-info"><span class="walk-from">Bouillon République</span><span class="walk-time">32 min</span></div>
+      <div class="walk-info"><span class="walk-from">Brasserie Dubillot</span><span class="walk-time">25 min</span></div>
+      <div class="walk-info"><span class="walk-from">Brasserie Bellanger</span><span class="walk-time">cab recommended (15 min)</span></div>
+      <div class="walk-info"><span class="walk-from">Rue Mouffetard Market</span><span class="walk-time">10 min</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- LEAFLET MAP SCRIPT -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function() {
+  var fb=document.getElementById('map-fallback'); if(fb) fb.style.display='none';
+  const map = L.map('paris-map').setView([48.857, 2.337], 14);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+
+  function makeIcon(color, size) {
+    return L.divIcon({
+      className: '',
+      html: `<div style="
+        width:${size||28}px;height:${size||28}px;
+        background:${color};border:2px solid white;
+        border-radius:50%;display:flex;align-items:center;
+        justify-content:center;
+        box-shadow:0 2px 6px rgba(0,0,0,0.35);
+        font-size:${size?Math.floor(size*.5):13}px;color:white;font-weight:700;
+        font-family:'DM Sans',sans-serif;
+        cursor:pointer;
+      ">${''}</div>`,
+      iconSize: [size||28, size||28],
+      iconAnchor: [(size||28)/2, (size||28)/2],
+      popupAnchor: [0, -(size||28)/2]
+    });
+  }
+
+  function makeNumberIcon(color, num) {
+    return L.divIcon({
+      className: '',
+      html: `<div style="
+        width:30px;height:30px;
+        background:${color};border:2.5px solid white;
+        border-radius:50%;display:flex;align-items:center;
+        justify-content:center;
+        box-shadow:0 2px 8px rgba(0,0,0,0.4);
+        font-size:12px;color:white;font-weight:700;
+        font-family:'DM Sans',sans-serif;cursor:pointer;
+      ">${num}</div>`,
+      iconSize: [30, 30],
+      iconAnchor: [15, 15],
+      popupAnchor: [0, -18]
+    });
+  }
+
+  const popup = (title, sub, detail, link) => `
+    <div style="font-family:'DM Sans',sans-serif;min-width:200px;max-width:240px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#1B3A5C;font-weight:600;margin-bottom:3px">${title}</div>
+      <div style="font-size:11px;color:#B8963E;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">${sub}</div>
+      <div style="font-size:12.5px;color:#333;line-height:1.55;margin-bottom:8px">${detail}</div>
+      ${link ? `<a href="${link}" target="_blank" style="font-size:11px;color:#1B3A5C;font-weight:600">Book / Info →</a>` : ''}
+    </div>`;
+
+  const NAVY='#1B3A5C', GOLD='#B8963E', RED='#C62828', GREEN='#2E7D32', PURPLE='#6A1B9A', BLUE='#01579B';
+
+  // ── HOTEL (star) ──
+  L.marker([48.848626, 2.348054], {
+    icon: L.divIcon({
+      className:'',
+      html:`<div style="width:36px;height:36px;background:${NAVY};border:3px solid #B8963E;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.5);font-size:16px;cursor:pointer">🏨</div>`,
+      iconSize:[36,36],iconAnchor:[18,18],popupAnchor:[0,-22]
+    })
+  }).addTo(map).bindPopup(popup('Hôtel Atmosphères','YOUR HOTEL · 5th arr.','31 Rue des Écoles · Latin Quarter · 8 min walk to Notre-Dame · Sauna, honesty bar, 24hr desk','https://2lcollection.com/en/hotel-atmospheres.html'));
+
+  // ── MUSEUMS & MONUMENTS ──
+  const museums = [
+    [48.855374, 2.344961, '1', 'Sainte-Chapelle','Monument · Day 2','€22 · 9am timed entry · 12-min walk from hotel · Book at sainte-chapelle.fr','https://www.sainte-chapelle.fr/en'],
+    [48.8637884, 2.3226724, '2', "Musée de l'Orangerie",'Museum · Day 3','€12.50 · 9am timed entry · CLOSED TUESDAYS · Book at musee-orangerie.fr','https://www.musee-orangerie.fr/en'],
+    [48.8599614, 2.3265614, '3', "Musée d'Orsay",'Museum · Day 5','€16 · Use Entrance C · CLOSED MONDAYS · Book at musee-orsay.fr','https://www.musee-orsay.fr/en'],
+    [48.8660479, 2.3145896, '4', 'Petit Palais','Museum · Day 3 · FREE','No booking needed · Walk straight in · Tue–Sun · petitpalais.paris.fr','https://www.petitpalais.paris.fr/en'],
+    [48.8606111, 2.337644, '5', 'The Louvre','Museum · Day 6','€32 · 9am timed entry · Carrousel underground entrance ONLY · Book at louvre.fr','https://www.louvre.fr/en'],
+    [48.8649723, 2.3378061, '6', 'Jardin du Palais Royal','Garden · Days 3 &amp; 6 · FREE','No booking · Open 8am–10:30pm · Buren columns, arcade shops, restaurants',''],
+    [48.873622, 2.332110, '7', 'Galeries Lafayette Rooftop','Free Viewpoint · Day 3','FREE · Take elevator to 6th floor · No ticket needed · Best 4–6pm',''],
+    [48.85296820000001, 2.3499021, '8', 'Notre-Dame Cathedral','Landmark · Day 1','Exterior free · Interior access at notredamedeparis.fr · 8-min walk from hotel','https://www.notredamedeparis.fr/en/visiting/'],
+  ];
+  museums.forEach(([lat,lng,num,name,sub,detail,link]) =>
+    L.marker([lat,lng],{icon:makeNumberIcon(GOLD,num)}).addTo(map).bindPopup(popup(name,sub,detail,link)));
+
+  // ── RESTAURANTS ──
+  const restaurants = [
+    [48.8529451, 2.3391987, '1', 'Brasserie des Prés','Restaurant · Monday Dinner','€60–80/person · 15-min walk from hotel · Book NOW at lanouvellegarde.com','http://lanouvellegarde.com'],
+    [48.880920599999996, 2.3500288, '2', 'Brasserie Bellanger','Restaurant · Tue &amp; Sat Dinner','€55–70/person · 15-min cab · Book BOTH nights at nouvellegardegroupe.fr','https://nouvellegardegroupe.fr'],
+    [48.8661074, 2.3646338, '3', 'Bouillon République','Restaurant · Thursday Dinner','€35–50/person · Book 3–4 weeks ahead at bouillonlesite.com','https://bouillonlesite.com/bouillon-republique'],
+    [48.868079, 2.351985, '4', 'Brasserie Dubillot','Restaurant · Wednesday Dinner','€50–65/person · Book ahead at nouvellegardegroupe.com','https://nouvellegardegroupe.com'],
+    [48.851731, 2.349436, '5', 'A. Lacroix Pâtissier','Pastry &amp; Coffee · Day 2 Morning','€8–12/person · No reservation · Opens 10am · Notre-Dame quai view',''],
+  ];
+  restaurants.forEach(([lat,lng,num,name,sub,detail,link]) =>
+    L.marker([lat,lng],{icon:makeNumberIcon(RED,num)}).addTo(map).bindPopup(popup(name,sub,detail,link)));
+
+  // ── BARS & MARKETS ──
+  const bars = [
+    [48.8628656, 2.3620448, 'M', "Marché des Enfants Rouges",'Market · Thursday Morning','€15–25/person · No booking · Opens 9:30am · CLOSED MONDAYS',''],
+    [48.8634096, 2.3629424, 'W', 'Cave Monsieur Paris','Wine Bar · Thursday Evening','No reservation · Opens 5pm · Natural wines, ravioli, charcuterie',''],
+    [48.861044, 2.354439, 'P', 'Manteigaria','Pastry Stop · Thursday','€6–7/person · No reservation · Portuguese egg tarts + espresso',''],
+    [48.8640106, 2.3059374, 'B', 'Bateaux Mouches','Seine Cruise · Wednesday Evening','€17/person online · Book at bateaux-mouches.fr · 7:30pm departure','https://www.bateaux-mouches.fr/en/reservation/tickets'],
+  ];
+  bars.forEach(([lat,lng,letter,name,sub,detail,link]) =>
+    L.marker([lat,lng],{icon:makeNumberIcon(GREEN,letter)}).addTo(map).bindPopup(popup(name,sub,detail,link)));
+
+  // ── SHOPPING ──
+  const shopping = [
+    [48.8616193, 2.3647342, 'A', 'A L\'O — 1905','Fashion · Thursday','Opens 11:30am · Ask for Chris · French workwear unavailable in US',''],
+    [48.8611678, 2.3663452, 'I', 'ITEMS Paris','Fashion · Thursday','Opens 11am · Indie designers · 5.0 stars',''],
+  ];
+  shopping.forEach(([lat,lng,letter,name,sub,detail,link]) =>
+    L.marker([lat,lng],{icon:makeNumberIcon(PURPLE,letter)}).addTo(map).bindPopup(popup(name,sub,detail,link)));
+
+  // ── LANDMARKS ──
+  const landmarks = [
+    [48.858370, 2.294481, 'E', 'Eiffel Tower','Landmark · Day 3','Trocadéro view + base walk · 30–45 min exterior only · Free',''],
+  ];
+  landmarks.forEach(([lat,lng,letter,name,sub,detail,link]) =>
+    L.marker([lat,lng],{icon:makeNumberIcon(BLUE,letter)}).addTo(map).bindPopup(popup(name,sub,detail,link)));
+
+  // ── DAY 1 ROUTE LINE (approximate) ──
+  const day1 = [[48.848626,2.348054],[48.852968,2.349902],[48.852945,2.339199]];
+  L.polyline(day1, {color:'#1B3A5C', weight:2, opacity:0.3, dashArray:'6,8'}).addTo(map);
+
+  // ── DAY 2 ROUTE LINE ──
+  const day2 = [[48.848626,2.348054],[48.855374,2.344961],[48.851731,2.349436]];
+  L.polyline(day2, {color:'#B8963E', weight:2, opacity:0.3, dashArray:'6,8'}).addTo(map);
+
+  // ── DAY 3 ROUTE LINE ──
+  const day3 = [[48.848626,2.348054],[48.863788,2.322672],[48.858370,2.294481],[48.866048,2.314590],[48.873622,2.332110],[48.864011,2.305937]];
+  L.polyline(day3, {color:'#2E7D32', weight:2, opacity:0.3, dashArray:'6,8'}).addTo(map);
+
+  // fit bounds
+  const allPoints = [
+    [48.848626,2.348054],[48.858370,2.294481],[48.880920,2.350028],
+    [48.873622,2.332110],[48.863788,2.322672],[48.855374,2.344961]
+  ];
+  map.fitBounds(allPoints, {padding:[30,30]});
+})();
+</script>
